@@ -1,7 +1,6 @@
 import './App.css';
 import { BrowserRouter,Route,Routes } from 'react-router-dom';
-import Landing from './LandingPage/LandingPage';
-import MainPage from './MainPage/MainPage';
+import Game from './Game/Game';
 
 function App() {
   return (
@@ -14,17 +13,7 @@ function App() {
           element=
           {
             <>
-            <Landing/>
-            </>
-          }
-        />
-
-        <Route
-          path='/game'
-          element=
-          {
-            <>
-            <MainPage/>
+            <Game/>
             </>
           }
         />
