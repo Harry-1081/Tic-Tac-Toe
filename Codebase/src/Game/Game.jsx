@@ -11,48 +11,48 @@ function Game(){
 
                 <div className={grid}>
                     <div className='grid-1x1'>
-                        <span>X</span>
-                        <span>O</span>
+                        {/* <span>X</span> */}
+                        {/* <span>O</span> */}
                     </div>
 
                     <div className='grid-1x2'> 
-                        <span>X</span>
+                        {/* <span>X</span> */}
                         <span>O</span>
 
                     </div>
 
                     <div className='grid-1x3'> 
                         <span>X</span>
-                        <span>O</span>
+                        {/* <span>O</span> */}
                     </div>
 
                     <div className='grid-2x1'> 
                         <span>X</span>
-                        <span>O</span>
+                        {/* <span>O</span> */}
                     </div>
 
                     <div className='grid-2x2'> 
-                        <span>X</span>
+                        {/* <span>X</span> */}
                         <span>O</span>
                     </div>
 
                     <div className='grid-2x3'> 
                         <span>X</span>
-                        <span>O</span>
+                        {/* <span>O</span> */}
                     </div>
 
                     <div className='grid-3x1'> 
-                        <span>X</span>
-                        <span>O</span>
+                        {/* <span>X</span> */}
+                        {/* <span>O</span> */}
                     </div>
 
                     <div className='grid-3x2'> 
-                        <span>X</span>
-                        <span>O</span>
+                        {/* <span>X</span> */}
+                        {/* <span>O</span> */}
                     </div>
 
                     <div className='grid-3x3'> 
-                        <span>X</span>
+                        {/* <span>X</span> */}
                         <span>O</span>
                     </div>
 
