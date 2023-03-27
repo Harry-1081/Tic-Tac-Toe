@@ -32,13 +32,16 @@
     border: 2px solid rgb(84, 36, 157);
     background-color: rgb(146, 146, 187);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-}
-.darkgrid div span{
     font-family: 'Delicious Handrawn', cursive;
     font-size: 120px;
     color: rgb(40, 17, 81);
-    /* text-shadow: 4px 1px 4px rgb(63, 0, 235),7px 1px 5px rgb(185, 12, 18); */
 }
+/* .input{
+    font-family: 'Delicious Handrawn', cursive;
+    font-size: 120px;
+    color: rgb(40, 17, 81);
+} */
+/* text-shadow: 4px 1px 4px rgb(63, 0, 235),7px 1px 5px rgb(185, 12, 18); */
 
 /* White grid */
 .whitegrid{
@@ -60,12 +63,9 @@
     border: 1px solid   rgb(84, 36, 157);
     background-color:rgb(84, 36, 157);
     box-shadow: rgba(0, 0, 0, 0.56) 0px 3px 6px, rgba(0, 0, 0, 0.63) 0px 3px 6px;
-}
-.whitegrid div span{
     font-family: 'Delicious Handrawn', cursive;
     font-size: 120px;
-    color:  rgb(181, 181, 207);
-    /* text-shadow: 4px 1px 4px rgb(24, 0, 235),7px 1px 5px rgb(61, 15, 16); */
+    color: rgb(186, 186, 233);
 }
 
 /* Theme Changer */
