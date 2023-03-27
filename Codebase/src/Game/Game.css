@@ -27,6 +27,7 @@
 .darkgrid div{
     height: 147px;
     width: 147px;
+    cursor: pointer;
     border-radius: 7px;
     text-align: center;
     border: 2px solid rgb(84, 36, 157);
@@ -36,12 +37,7 @@
     font-size: 120px;
     color: rgb(40, 17, 81);
 }
-/* .input{
-    font-family: 'Delicious Handrawn', cursive;
-    font-size: 120px;
-    color: rgb(40, 17, 81);
-} */
-/* text-shadow: 4px 1px 4px rgb(63, 0, 235),7px 1px 5px rgb(185, 12, 18); */
+
 
 /* White grid */
 .whitegrid{
@@ -60,6 +56,7 @@
     width: 147px;
     border-radius: 7px;
     text-align: center;
+    cursor: pointer;
     border: 1px solid   rgb(84, 36, 157);
     background-color:rgb(84, 36, 157);
     box-shadow: rgba(0, 0, 0, 0.56) 0px 3px 6px, rgba(0, 0, 0, 0.63) 0px 3px 6px;

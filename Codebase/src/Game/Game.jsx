@@ -2,10 +2,10 @@ import { useState,useRef } from 'react';
 import swal from 'sweetalert';  
 import { MdDarkMode,MdOutlineLightMode } from 'react-icons/md'
 import './Game.css'
+import { useStates } from '../States';
 
 function Game(){
-    const[background,setBackground] = useState("darkbg");
-    const[grid,setgrid] = useState("darkgrid");
+    const {background,setBackground,goto,grid,setgrid} = useStates();
 
     const boardRef = useRef(null);
 
@@ -13,51 +13,68 @@ function Game(){
     const[turn,setTurn] = useState(0);
 
     // eslint-disable-next-line
-    const [data, setData] = useState(['', '', '', '', '', '', '', '', '']);
+    const [gridvalue, setgridvalue] = useState(['', '', '', '', '', '', '', '', '']);
 
-    const draw = (e,num) => {
-       if (data[num - 1] === '') {
-            const current = turn === 0 ? "X" : "O"
-            data[num - 1] = current;
-            e.target.innerText = current;
+    const Game = (e,num) => {
+       if (gridvalue[num - 1] === '') 
+       {
+            const XO = turn === 0 ? "X" : "O"
+            gridvalue[num - 1] = XO;
+            e.target.innerText = XO;
             setTurn(turn === 0 ? 1 : 0)
 
             for(let i=0;i<9;i++){
-                if(data[i]!=="")
+                if(gridvalue[i]!=="")
                 all=all+1;
             }
-            // console.log(data);
-            checkWinner(data);
+            // console.log(e);
+            checkWinner(gridvalue);
         }
     }
 
+    const resetgridvalue = () => 
+    {
+        setgridvalue(['', '', '', '', '', '', '', '', '']);
+        setTurn(0);
+        goto("/");
+    }
+
     const checkWinner = () => {
-        if (data[0]===data[4]  && data[4]!==""&& data[4]===data[8] && data[4]!=="")
-        swal("",`Player ${data[0]} wins`,"success");
+        if (gridvalue[0]===gridvalue[4]  && gridvalue[4]!==""&& gridvalue[4]===gridvalue[8] && gridvalue[4]!==""){
+        swal("",`Player ${gridvalue[0]} wins`,"success")
+        .then((value) => { resetgridvalue() });}
 
-        else if(data[0]===data[1] && data[1]===data[2] && data[1]!=="")
-        swal("",`Player ${data[0]} wins`,"success");
+        else if(gridvalue[0]===gridvalue[1] && gridvalue[1]===gridvalue[2] && gridvalue[1]!==""){
+        swal("",`Player ${gridvalue[0]} wins`,"success")
+        .then((value) => { resetgridvalue() });}
 
-        else if(data[3]===data[4] && data[4]===data[5] && data[4]!=="")
-        swal("",`Player ${data[4]} wins`,"success");
+        else if(gridvalue[3]===gridvalue[4] && gridvalue[4]===gridvalue[5] && gridvalue[4]!==""){
+        swal("",`Player ${gridvalue[4]} wins`,"success")
+        .then((value) => { resetgridvalue() });}
 
-        else if(data[6]===data[7] && data[7]===data[8] && data[7]!=="")
-        swal("",`Player ${data[6]} wins`,"success");
+        else if(gridvalue[6]===gridvalue[7] && gridvalue[7]===gridvalue[8] && gridvalue[7]!==""){
+        swal("",`Player ${gridvalue[6]} wins`,"success")
+        .then((value) => { resetgridvalue() });}
 
-        else if(data[0]===data[3] && data[3]===data[6] && data[3]!=="")
-        swal("",`Player ${data[0]} wins`,"success");
+        else if(gridvalue[0]===gridvalue[3] && gridvalue[3]===gridvalue[6] && gridvalue[3]!==""){
+        swal("",`Player ${gridvalue[0]} wins`,"success")
+        .then((value) => { resetgridvalue() });}
 
-        else if(data[1]===data[4] && data[4]===data[7] && data[4]!=="")
-        swal("",`Player ${data[1]} wins`,"success");
+        else if(gridvalue[1]===gridvalue[4] && gridvalue[4]===gridvalue[7] && gridvalue[4]!==""){
+        swal("",`Player ${gridvalue[1]} wins`,"success")
+        .then((value) => { resetgridvalue() });}
 
-        else if(data[2]===data[5] && data[5]===data[8] && data[5]!=="")
-        swal("",`Player ${data[5]} wins`,"success");
+        else if(gridvalue[2]===gridvalue[5] && gridvalue[5]===gridvalue[8] && gridvalue[5]!==""){
+        swal("",`Player ${gridvalue[5]} wins`,"success")
+        .then((value) => { resetgridvalue() });}
 
-        else if(data[2]===data[4] && data[4]===data[6] && data[4]!=="")
-        swal("",`Player ${data[6]} wins`,"success");
+        else if(gridvalue[2]===gridvalue[4] && gridvalue[4]===gridvalue[6] && gridvalue[4]!==""){
+        swal("",`Player ${gridvalue[6]} wins`,"success")
+        .then((value) => { resetgridvalue() });}
 
-        else if(all===9)
+        else if(all===9){
         swal("","Draw Match","success")
+        .then((value) => { resetgridvalue() });}
 
     }
 
@@ -67,23 +84,23 @@ function Game(){
 
                 <div className={grid}>
 
-                    <div className='input grid-1x1' onClick={(e)=>draw(e,1)}> </div>
+                    <div className='input grid-1x1' onClick={(e)=>Game(e,1)}> </div>
 
-                    <div className='input grid-1x2' onClick={(e)=>draw(e,2)}> </div>
+                    <div className='input grid-1x2' onClick={(e)=>Game(e,2)}> </div>
 
-                    <div className='input grid-1x3' onClick={(e)=>draw(e,3)}> </div>
+                    <div className='input grid-1x3' onClick={(e)=>Game(e,3)}> </div>
 
-                    <div className='input grid-2x1' onClick={(e)=>draw(e,4)}> </div>
+                    <div className='input grid-2x1' onClick={(e)=>Game(e,4)}> </div>
 
-                    <div className='input grid-2x2' onClick={(e)=>draw(e,5)}> </div>
+                    <div className='input grid-2x2' onClick={(e)=>Game(e,5)}> </div>
 
-                    <div className='input grid-2x3' onClick={(e)=>draw(e,6)}> </div>
+                    <div className='input grid-2x3' onClick={(e)=>Game(e,6)}> </div>
 
-                    <div className='input grid-3x1' onClick={(e)=>draw(e,7)}> </div>
+                    <div className='input grid-3x1' onClick={(e)=>Game(e,7)}> </div>
 
-                    <div className='input grid-3x2' onClick={(e)=>draw(e,8)}> </div>
+                    <div className='input grid-3x2' onClick={(e)=>Game(e,8)}> </div>
 
-                    <div className='input grid-3x3' onClick={(e)=>draw(e,9)}> </div>
+                    <div className='input grid-3x3' onClick={(e)=>Game(e,9)}> </div>
 
                 </div>
 

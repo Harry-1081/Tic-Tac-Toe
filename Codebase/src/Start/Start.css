@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap');
+
+.play-btn
+{
+    position: absolute;
+    top: 28%;
+    left: 38%;
+    font-size: 70px;
+    font-family: 'Delicious Handrawn', cursive;
+    padding: 20px;
+    width: 400px;
+    background-color: rgb(228, 220, 211);
+    border-radius: 10px;
+    cursor: pointer;
+}
+.how-btn
+{
+    position: absolute;
+    top: 48%;
+    left: 38%;
+    font-size: 70px;
+    font-family: 'Delicious Handrawn', cursive;
+    padding: 20px;
+    width: 400px;
+    background-color: rgb(228, 220, 211);
+    border-radius: 10px;
+    cursor: pointer;
+}
+.play-btn:hover, .how-btn:hover{
+    transform: scale(1.01);
+}
