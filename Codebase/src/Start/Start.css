@@ -1,31 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap');
 
+.logo-img{
+    height: 200px;
+    position: absolute;
+    top: 4%;
+    left: 27%;
+}
 .play-btn
 {
     position: absolute;
-    top: 28%;
-    left: 38%;
+    top: 32%;
+    left: 37%;
     font-size: 70px;
     font-family: 'Delicious Handrawn', cursive;
     padding: 20px;
     width: 400px;
-    background-color: rgb(228, 220, 211);
+    background-color: rgb(228, 211, 226);
     border-radius: 10px;
     cursor: pointer;
 }
 .how-btn
 {
     position: absolute;
-    top: 48%;
-    left: 38%;
+    top: 52%;
+    left: 37%;
     font-size: 70px;
     font-family: 'Delicious Handrawn', cursive;
     padding: 20px;
     width: 400px;
-    background-color: rgb(228, 220, 211);
+    background-color: rgb(228, 211, 226);
     border-radius: 10px;
     cursor: pointer;
 }
-.play-btn:hover, .how-btn:hover{
+.Settings-btn
+{
+    position: absolute;
+    top: 72%;
+    left: 37%;
+    font-size: 70px;
+    font-family: 'Delicious Handrawn', cursive;
+    padding: 20px;
+    width: 400px;
+    background-color: rgb(228, 211, 226);
+    border-radius: 10px;
+    cursor: pointer;
+}
+.play-btn:hover, .how-btn:hover, .Settings-btn:hover{
     transform: scale(1.01);
 }

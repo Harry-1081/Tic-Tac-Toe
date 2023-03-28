@@ -1,5 +1,5 @@
 import { useState,useRef } from 'react';
-import swal from 'sweetalert';  
+import swal from 'sweetalert2';  
 import { MdDarkMode,MdOutlineLightMode } from 'react-icons/md'
 import './Game.css'
 import { useStates } from '../States';
@@ -41,39 +41,39 @@ function Game(){
 
     const checkWinner = () => {
         if (gridvalue[0]===gridvalue[4]  && gridvalue[4]!==""&& gridvalue[4]===gridvalue[8] && gridvalue[4]!==""){
-        swal("",`Player ${gridvalue[0]} wins`,"success")
+        swal.fire("",`Player ${gridvalue[0]} wins`,"success")
         .then((value) => { resetgridvalue() });}
 
         else if(gridvalue[0]===gridvalue[1] && gridvalue[1]===gridvalue[2] && gridvalue[1]!==""){
-        swal("",`Player ${gridvalue[0]} wins`,"success")
+        swal.fire("",`Player ${gridvalue[0]} wins`,"success")
         .then((value) => { resetgridvalue() });}
 
         else if(gridvalue[3]===gridvalue[4] && gridvalue[4]===gridvalue[5] && gridvalue[4]!==""){
-        swal("",`Player ${gridvalue[4]} wins`,"success")
+        swal.fire("",`Player ${gridvalue[4]} wins`,"success")
         .then((value) => { resetgridvalue() });}
 
         else if(gridvalue[6]===gridvalue[7] && gridvalue[7]===gridvalue[8] && gridvalue[7]!==""){
-        swal("",`Player ${gridvalue[6]} wins`,"success")
+        swal.fire("",`Player ${gridvalue[6]} wins`,"success")
         .then((value) => { resetgridvalue() });}
 
         else if(gridvalue[0]===gridvalue[3] && gridvalue[3]===gridvalue[6] && gridvalue[3]!==""){
-        swal("",`Player ${gridvalue[0]} wins`,"success")
+        swal.fire("",`Player ${gridvalue[0]} wins`,"success")
         .then((value) => { resetgridvalue() });}
 
         else if(gridvalue[1]===gridvalue[4] && gridvalue[4]===gridvalue[7] && gridvalue[4]!==""){
-        swal("",`Player ${gridvalue[1]} wins`,"success")
+        swal.fire("",`Player ${gridvalue[1]} wins`,"success")
         .then((value) => { resetgridvalue() });}
 
         else if(gridvalue[2]===gridvalue[5] && gridvalue[5]===gridvalue[8] && gridvalue[5]!==""){
-        swal("",`Player ${gridvalue[5]} wins`,"success")
+        swal.fire("",`Player ${gridvalue[5]} wins`,"success")
         .then((value) => { resetgridvalue() });}
 
         else if(gridvalue[2]===gridvalue[4] && gridvalue[4]===gridvalue[6] && gridvalue[4]!==""){
-        swal("",`Player ${gridvalue[6]} wins`,"success")
+        swal.fire("",`Player ${gridvalue[6]} wins`,"success")
         .then((value) => { resetgridvalue() });}
 
         else if(all===9){
-        swal("","Draw Match","success")
+        swal.fire("","Draw Match","success")
         .then((value) => { resetgridvalue() });}
 
     }

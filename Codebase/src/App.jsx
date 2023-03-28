@@ -11,15 +11,6 @@ function App() {
     <States>
       <Routes>
 
-        <Route
-          path='/game'
-          element=
-          {
-            <>
-            <Game/>
-            </>
-          }
-        />
 
         <Route
           path='/'
@@ -30,6 +21,16 @@ function App() {
             </>
           }
           />
+
+        <Route
+          path='/game'
+          element=
+          {
+            <>
+            <Game/>
+            </>
+          }
+        />
 
       </Routes>
     </States>
