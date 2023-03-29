@@ -1,6 +1,7 @@
 import '../Game/Game.css';
 import './Start.css';
 import { useStates } from '../States';
+import { Link } from 'react-router-dom';
 
 function Start() {
     const{ goto } = useStates();
@@ -18,11 +19,15 @@ function Start() {
             </div>
 
             <div className='how-btn-div'>
+            <Link to="https://youtu.be/USEjXNCTvcc" target="_blank">
                 <button className='how-btn'>How to Play ?</button>
+            </Link>
             </div>
 
             <div className='Settings-btn-div'>
-                <button className='Settings-btn'>Settings</button>
+            <Link to="mailto:theharryverse@gmail.com">
+                <button className='Settings-btn'>Contact Us</button>
+            </Link>
             </div>
         </div>
         </>
